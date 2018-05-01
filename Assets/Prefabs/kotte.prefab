@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4662797927088928}
   - component: {fileID: 212657484152442056}
   - component: {fileID: 58091822125133098}
+  - component: {fileID: 114705896753199858}
   m_Layer: 0
   m_Name: kotte
   m_TagString: Collectible
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1766489935526858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.602, y: -0.8, z: 0}
+  m_LocalPosition: {x: 14.8, y: -1.56, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,12 +51,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008331934, y: 0}
   serializedVersion: 2
   m_Radius: 0.3291607
+--- !u!114 &114705896753199858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1766489935526858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40ec04befe124c238a51e2f08d20d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 198244073988483150, guid: 523137644e18544e2a3607bc0b778fd3,
+    type: 2}
 --- !u!212 &212657484152442056
 SpriteRenderer:
   m_ObjectHideFlags: 1

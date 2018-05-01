@@ -45,8 +45,8 @@ public class Player : MonoBehaviour {
 		} else {
 			isRunning = false;
 		}
-
 		animator.SetBool("isRunning", isRunning);
+		animator.SetBool("isGrounded", isGrounded);
 	}
 
 	void LateUpdate () {
@@ -68,7 +68,11 @@ public class Player : MonoBehaviour {
 
 	void Jump() {
 		moveY = 0f;
-		rigidBody.AddForce(new Vector2(0, jumpForce));
+		float direction = 0;
+		if(moveX != 0) {
+			direction = (moveX < 0) ? jumpForce * -1f : jumpForce;
+		}
+		rigidBody.AddForce(new Vector2(direction, jumpForce));
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
